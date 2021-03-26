@@ -34,8 +34,9 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
   <arg name="z" default="0.0"/>
   <arg name="yaw" default="0.0"/>
 
-  <arg name="laser_enabled" default="$(optenv HUSKY_LMS1XX_ENABLED false)"/>
-  <arg name="realsense_enabled" default="$(optenv HUSKY_REALSENSE_ENABLED false)"/>
+  <!-- by default, enable the onboard LIDAR and RealSense sensors. -->
+  <arg name="laser_enabled" default="$(optenv HUSKY_LMS1XX_ENABLED true)"/>
+  <arg name="realsense_enabled" default="$(optenv HUSKY_REALSENSE_ENABLED true)"/>
   <arg name="urdf_extras" default="$(optenv HUSKY_URDF_EXTRAS)"/>
 
   <!-- Optionally disable teleop control -->
